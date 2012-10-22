@@ -7,5 +7,7 @@ LATEXMK_OPTS = '-pdf -pdflatex=lualatex -recorder'
 #   watch(%r{file/path}) { `command(s)` }
 #
 guard 'shell' do
-  watch(/([^.].*)\.tex$/) {|m| `latexmk #{LATEXMK_OPTS} #{m[1]}` }
+  watch(/([^.].*)\.tex$/) do |m|
+    `latexmk #{LATEXMK_OPTS} training-short-talk-handouts`
+  end
 end
