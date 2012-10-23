@@ -8,6 +8,6 @@ LATEXMK_OPTS = '-pdf -pdflatex=lualatex -recorder'
 #
 guard 'shell' do
   watch(/([^.].*)\.tex$/) do |m|
-    `latexmk #{LATEXMK_OPTS} training-short-talk-handouts`
+    `latexmk #{LATEXMK_OPTS} training-short-talk-handouts training-short-talk-slides`
   end
 end
